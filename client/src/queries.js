@@ -28,3 +28,11 @@ mutation Login($email:String, $password:String){
   }
 }
 `
+export const addTodoQuery=gql`
+mutation AddTodo($body:String, $jwt:String){
+  addTodo(body:$body, jwt:$jwt){
+    _id
+    body
+  }
+}
+`
